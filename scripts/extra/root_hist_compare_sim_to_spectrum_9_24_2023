@@ -1,0 +1,483 @@
+.x fitTest1.C
+.x fitTest1.C
+.x fitTest1.C
+.x fitTest1.C
+.x fitTest1.C
+.x fitTest1.C
+.x fitTest1.C
+.x fitTest1.C
+.x fitTest1.C
+.x fitTest1.C
+.x fitTest1.C
+.x fitTest1.C
+.x fitTest1.C
+TFile *gaus = new TFile("tf1test");
+.x fitTest1.C
+.x fitTest1.C
+.x fitTest1.C
+.x fitTest1.C
+.x fitTest1.C
+.x fitTest1.C
+.x fitTest1.C
+.x fitTest1.C
+.x fitTest1.C
+.x fitTest1.C
+TFile *am = new TFile("resolutionDir/subBackrun_0.root")
+T->Draw("run_data.amp>>(8000,0,16000)")
+T->ls()
+am->Print()
+am->ls()
+sHist->Draw();
+TFile *am = new TFile("resolutionDir/subBackrun_0.root")
+sHist->Draw();
+TFile *am = new TFile("resolutionDir/subBackrun_0.root")
+.x _ScaleToTime.C("resolutionDir/subNeutrun_4.root","T",314273451991689,"resolutionDir/subNeutrun_00.root","T",131469576501452,"showing/subBacksubNeutrun_4.root")
+.x _ScaleToTime.C("resolutionDir/subNeutrun_4.root","T",314273451991689,"resolutionDir/subNeutrun_00.root","T",131469576501452,"resolutionDir/subBacksubNeutrun_4.root")
+TFile *am = new TFile("resolutionDir/subBackrun_0.root")
+sHist->Draw();
+sHist->Draw();
+TFile *am = new TFile("resolutionDir/subBackrun_0.root")
+sHist->Draw();
+TFile *am = new TFile("resolutionDir/subBackrun_0.root")
+sHist->Draw();
+TFile *am = new TFile("resolutionDir/run_0.root")
+am->Print()
+am->ls()
+T->Draw("run_data.amp>>(8000,0,16000)")
+T->Draw("run_data.amp>>(9000,0,16000)")
+T->Draw("run_data.amp>>(1000,0,1000)"
+.@
+T->Draw("run_data.amp>>(1000,0,1000)")
+T->Draw("run_data.amp>>(500,0,1000)")
+T->Draw("run_data.amp>>(1000,0,1000)")
+TFile *am = new TFile("resolutionDir/subBackrun_0.root")
+sHist->Draw();
+sHist->Draw();
+sHist->Draw("L");
+sHist->Draw("HIST");
+TFile *am = new TFile("resolutionDir/subBackrun_0.root")
+sHist->Draw("HIST");
+sHist->Draw("HIST L");
+TFile *am = new TFile("resolutionDir/subBackrun_0.root")
+sHist->Draw("HIST L");
+sHist->Draw();
+TFile *am = new TFile("resolutionDir/subBackrun_0.root")
+sHist->Draw();
+TFile *am = new TFile("resolutionDir/subBackrun_0.root")
+sHist->Draw();
+sHist->Draw("hist func");
+TFile *am = new TFile("resolutionDir/subBackrun_0.root")
+sHist->Draw("hist func");
+TFile *am = new TFile("resolutionDir/subBackrun_0.root")
+sHist->Draw("hist same")
+sHist->SetStats(1)
+sHist->SetStats(0)
+sHist->SetStats(1)
+sHist->SetStats(0)
+gStyle->SetOptStat(pcev)
+gStyle->SetOptStat("pcev")
+sHist->SetStats(1)
+sHist->SetStats(0111)
+sHist->SetStats(1)
+sHist->SetStats(0111)
+TFile *am = new TFile("resolutionDir/subBackrun_0.root")
+sHist->Draw("hist")
+sHist->GetFitResult()
+TFile *am = new TFile("resolutionDir/subBackrun_0.root")
+sHist->Draw("hist")[C
+sHist->Draw("hist")
+TFile *am = new TFile("resolutionDir/subBackrun_0.root")
+sHist->Draw("hist")
+TFile *am = new TFile("resolutionDir/subBackrun_0.root")
+sHist->Draw("hist")
+TFile *cs = new TFile("resolutionDir/subBackrun_2.root")
+sHist->Draw("hist")
+TFile *na = new TFile("resolutionDir/subBackrun_3.root")
+sHist->Draw("hist")
+TFile *na = new TFile("resolutionDir/subBackrun_3.root")
+sHist->Draw("hist")
+TFile *na = new TFile("resolutionDir/subBackrun_3.root")
+sHist->Draw("hist")
+TFile *na = new TFile("resolutionDir/subBackrun_3.root")
+sHist->Draw("hist")
+TFile *na = new TFile("resolutionDir/subBackrun_3.root")
+sHist->Draw("HIST")
+TFile *na = new TFile("resolutionDir/subBackrun_3.root")
+sHist->Draw("HIST")
+TFile *na = new TFile("resolutionDir/subBackrun_3.root")
+sHist->Draw("HIST")
+TFile *na = new TFile("resolutionDir/subBackrun_3.root")
+sHist->Draw("HIST")
+TFile *am = new TFile("resolutionDir/subBackrun_0.root")
+sHist->Draw("HIST")
+TFile *cs = new TFile("resolutionDir/subBackrun_2.root")
+sHist->Draw("HIST")
+TFile *cs = new TFile("resolutionDir/subBackrun_2.root")
+sHist->Draw("HIST")
+TFile *ambe = new TFile("resolutionDir/subBacksubNeutrun_4.root")
+sHist->Draw("HIST")
+TFile *am = new TFile("run_0minuit2gaussian.root")
+am->Print()
+am->ls()
+PrevFitTMP->Draw()
+TFile *am = new TFile("run_0minuit2gaussian.root")
+PrevFitTMP->GetParameter(0)
+PrevFitTMP->Eval(PrevFitTMP->GetParameter(1))
+TFile *ambe = new TFile("resolutionDir/subBacksubNeutrun_4.root")
+sHist->Draw("HIST")
+TFile *am = new TFile("run_0minuit2gaussian.root")
+am->Print()
+am->ls()
+.x getFitParams.C("run_0minuit2gaussian.root")
+.x getFitParams.C("run_0minuit2gaussian.root")
+.x getFitParams.C("run_0minuit2gaussian.root")
+.x getFitParams.C("run_0minuit2gaussian.root")
+.x getFitParams.C("run_0minuit2gaussian.root")
+.x getFitParams.C("run_0minuit2gaussian.root")
+.x getFitParams.C("run_0minuit2gaussian.root")
+.x getFitParams.C("run_0minuit2gaussian.root")
+.x getFitParams.C("run_0minuit2gaussian.root")
+.x getFitParams.C("run_0minuit2gaussian.root")
+.x getFitParams.C("run_0minuit2gaussian.root")
+.x getFitParams.C("run_0minuit2gaussian.root")
+.x getFitParams.C("run_0minuit2gaussian.root")
+.x getFitParams.C("run_0minuit2gaussian.root")
+.x getFitParams.C("run_0minuit2gaussian.root")
+.x getFitParams.C("run_0minuit2gaussian.root")
+.x getFitParams.C("run_2minuit2gaussian.root")
+.x getFitParams.C("run_2minuit2gaussian.root")
+.x getFitParams.C("run_0minuit2gaussian.root")
+.x getFitParams.C("run_0gaussian.root")
+.x getFitParams.C("run_0gaussian.root")
+.x getFitParams.C("run_2minuit2gaussian.root")
+.x getFitParams.C("run_3gaussian511.root")
+.x getFitParams.C("run_3gaussian511.root")
+.x getFitParams.C("run_3gaussian1274.root")
+.x getFitParams.C("run_4gaussian.root")
+.x _ResolutionFit.C 
+.x getFitParams.C("run_0minuit2gaussian.root")
+.x _ResolutionFit.C 
+.x getFitParams.C("run_0minuit2gaussian.root")
+.x getFitParams.C("run_2minuit2gaussian.root")
+.x getFitParams.C("run_2minuit2gaussian.root")
+.x getFitParams.C("run_3gaussian511.root")
+.x getFitParams.C("run_3gaussian511.root")
+.x getFitParams.C("run_3gaussian1274.root")
+.x getFitParams.C("run_4gaussian.root")
+.x _FitCalibration.C 
+.x _FitCalibration.C 
+.x _FitCalibration.C 
+TFile *am = new TFile("resolutionDir/subBackrun_0.root")
+sHist->Draw("HIST")
+TFile *am = new TFile("resolutionDir/subBackrun_0.root")
+sHist->Draw("HIST")
+TFile *_file0 = TFile::Open("_en_0.662.root")
+.ls
+new TBrowser
+TFile *_file0 = TFile::Open("_en_0.662.root")
+new TBrowser
+.q
+TFile *_file0 = TFile::Open("_en_2.45.root")
+TBrowser;
+new TBrowser;
+.q
+TFile *_file0 = TFile::Open("_en_2.45.root")
+new TBrowser;
+.q
+TFile *_file0 = TFile::Open("_en_2.45.root")
+new TBrowser;
+.q
+TFile *_file0 = TFile::Open("_en_2.45.root")
+new TBrowser;
+.q
+TFile *_file0 = TFile::Open("_en_14.1.root")
+new TBrowser;
+.q
+new TBrowser;
+TFile *am = new TFile("resolutionDir/subBackrun_0.root");
+sHist->Draw("HIST")
+.x getFitParams.C("run_0gaussian.root")
+.x getFitParams.C("run_0minuit2gaussian.root")
+.x getFitParams.C("run_0minuit2gaussian.root")
+TFile *am = new TFile("resolutionDir/subBackrun_0.root");
+sHist->Draw("HIST")
+.x getFitParams.C("run_0gaussian.root")
+.x getFitParams.C("run_4gaussian.root")
+TFile *am = new TFile("resolutionDir/subBackrun_0.root");
+am->ls()
+sHist->Draw("HIST")
+TFile *am = new TFile("resolutionDir/subBackrun_0.root");
+sHist->Draw("HIST")
+.x getFitParams.C("run_0gaussian.root")
+.x _ResolutionFit.C 
+new TBrowser;
+new TBrowser;
+new TBrowser;
+new TBrowser;
+new TBrowser;
+new TBrowser;
+new TBrowser;
+new TBrowser;
+new TBrowser;
+new TBrowser;
+new TBrowser;
+new TBrowser;
+new TBrowser;
+TFile *cs = new TFile("resolutionDir/subBackrun_2.root")
+cs->Print()
+cs->ls()
+sHist->Draw("HIST")
+.x calibrationDir/_AdjustXAxis.C("resolutionDir/subBackrun_2.root","sHist",0.167154,0.000511484)
+.x calibrationDir/_AdjustXAxis.C("resolutionDir/subBackrun_2.root","sHist",0.167154,0.000511484)
+.x calibrationDir/_AdjustXAxis.C("resolutionDir/subBackrun_2.root","sHist",0.167154,0.000511484)
+TFile *cs = new TFile("resolutionDir/subBackrun_2.root")
+cs->ls()
+cs->ls()
+.x calibrationDir/_AdjustXAxis.C("resolutionDir/subBackrun_2.root","sHist",0.167154,0.000511484)
+.x calibrationDir/_AdjustXAxis.C("resolutionDir/subBackrun_2.root","sHist",0.167154,0.000511484)
+.x calibrationDir/_AdjustXAxis.C("resolutionDir/subBackrun_2.root","sHist",0.167154,0.000511484)
+.x calibrationDir/_AdjustXAxis.C("resolutionDir/subBackrun_2.root","sHist",0.167154,0.000511484)
+.x _FitCalibration.C 
+.x _FitCalibration.C 
+.x _ResolutionFit.C 
+.x _ResolutionFit.C 
+new TBrowser;
+new TBrowser;
+new TBrowser;
+new TBrowser;
+new TBrowser;
+l
+ls
+ls
+ls
+TFile *na = new TFile("resolutionDir/subBackrun_3.root")
+na->Print()
+na->ls()
+ls
+sHist->Draw("HIST")
+sHist->GetNBinsX()
+sHist->GetNbinsX()
+sHist->GetBinLowEdge()
+sHist->GetBinLowEdge(0)
+sHist->GetBinLowEdge(1)
+sHist->GetBinLowEdge(16384)
+for (int i =0; i <16384; i++){ int newLabel = -0.0111713 + i*0.00050403435; xaxis 
+.@
+TAxis* xaxis = sHist->GetXaxis()
+for (int i =0; i <16384; i++){ int newLabel = -0.0111713 + i*0.00050403435; xaxis ->SetBinLabel(i,TString::Format("%d",newLabel));}
+TFile *na = new TFile("resolutionDir/subBackrun_3.root")
+TAxis* xaxis = sHist->GetXaxis()
+sHist->GetNbinsX()
+for (int i =1; i <=16384; i++){ int newLabel = -0.0111713 + i*0.00050403435; xaxis ->SetBinLabel(i,TString::Format("%d",newLabel));}
+sHist->Draw("HIST")
+TFile *na = new TFile("resolutionDir/subBackrun_3.root")
+sHist->Draw("HIST")
+TFile *na = new TFile("resolutionDir/subBackrun_3.root")
+.x _CloneHistNewBinLabels.C("resolutionDir/subBackrun_3.root","sHist",1,1)
+.x _CloneHistNewBinLabels.C("resolutionDir/subBackrun_3.root","sHist",1,1)
+.x _CloneHistNewBinLabels.C("resolutionDir/subBackrun_3.root","sHist",1,1)
+.x _CloneHistNewBinLabels.C("resolutionDir/subBackrun_3.root","sHist",-0.0111713,0.000503435)
+.x _FitCalibration.C 
+.x _FitCalibration.C 
+.x _FitCalibration.C 
+.x _CloneHistNewBinLabels.C("resolutionDir/subBackrun_3.root","sHist", 22.2141,1986.34)
+.x _CloneHistNewBinLabels.C("resolutionDir/subBackrun_3.root","sHist",-0.0111713,0.000503435)
+.x _CloneHistNewBinLabels.C("resolutionDir/subBackrun_3.root","sHist","x",-0.0111713,0.000503435)
+.x _CloneHistNewBinLabels.C("resolutionDir/subBackrun_3.root","sHist","x",-0.0111713,0.000503435)
+.x _CloneHistNewBinLabels.C("resolutionDir/subBackrun_3.root","sHist","x",-0.0111713,0.000503435)
+.x _CloneHistNewBinLabels.C("resolutionDir/subBackrun_3.root","sHist","x",-0.0111713,0.000503435)
+.x _CloneHistNewBinLabels.C("resolutionDir/subBackrun_3.root","sHist","resolutionDir/eveePlots/"scaledSubBackrun_3.root",-0.0111713,0.000503435)
+.x _CloneHistNewBinLabels.C("resolutionDir/subBackrun_3.root","sHist","resolutionDir/eveePlots/scaledSubBackrun_3.root",-0.0111713,0.000503435)
+.x _CloneHistNewBinLabels.C("resolutionDir/subBackrun_3.root","sHist","resolutionDir/eveePlots/scaledSubBackrun_3.root",-0.0111713,0.000503435)
+.x _CloneHistNewBinLabels.C("resolutionDir/subBackrun_3.root","sHist","resolutionDir/eveePlots/scaledSubBackrun_3.root",-0.0111713,0.000503435)
+.x _CloneHistNewBinLabels.C("resolutionDir/subBackrun_2.root","sHist","resolutionDir/eveePlots/scaledSubBackrun_2.root",-0.0111713,0.000503435)
+new TBrowser;
+new TBrowser;
+.x _CloneHistNewBinLabels.C("resolutionDir/subBacksubNeutrun_4.root","sHist","resolutionDir/eveePlots/scaledSubBackSubNeutrun_4.root",-0.0111713,0.000503435)
+.x _CloneHistNewBinLabels.C("resolutionDir/subBacksubNeutrun_4.root","sHist","resolutionDir/eveePlots/scaledSubBackSubNeutrun_4.root",-0.0111713,0.000503435)
+TFile *na = new TFile("resolutionDir/subBackrun_3.root")
+sHist->Draw("HIST")
+TFile *background = new TFile("resolutionDir/run_0.root")
+background->ls()
+T->Print()
+T->GetEntry(0)
+TFile *background = new TFile("resolutionDir/subBackrun_1.root")
+TFile *cs = new TFile("resolutionDir/subBackrun_2.root")
+sHist->Draw("HIST")
+TFile *cs = new TFile("resolutionDir/eveePlots/scaledSubBackrun_2.root")
+sHist->Draw("HIST")
+TFile *cs = new TFile("resolutionDir/eveePlots/scaledSubBackrun_3.root")
+sHist->Draw("HIST")
+new TBrowser;
+TFile *cs = new TFile("resolutionDir/eveePlots/scaledSubBackrun_3.root")
+sHist->Draw("HIST")
+new TCanvas;
+TFile *csnew = new TFile("resolutionDir/monteCarloPeaks/_en_0.511.root")
+sHist->Draw("HIST")
+csnew->ls)(
+csnew->ls()
+Det0_gam_smear->Draw("HIST")
+TFile *cees = new TFile("resolutionDir/monteCarloPeaks/_en_0.662.root"
+.@
+TFile *cees = new TFile("resolutionDir/monteCarloPeaks/_en_0.662.root")
+cees->Draw("HIST")
+new TCanvas;
+cees->Draw("HIST")
+cees->Print()
+cees->ls()
+Det0_gam_smear->Draw("HIST")
+TFile *ceesmeausre =  new TFile("resolutionDir/eveePlots/scaledSubBackrun_2.root")
+sHist->Draw("HIST")
+new TCanvas;
+Det0_gam_smear->Draw("HIST")
+TFile *cees = new TFile("resolutionDir/monteCarloPeaks/_en_0.662.root")
+cees->ls()
+Det0_gam_smear->Draw("HIST")
+TFile *na = new TFile("resolutionDir/monteCarloPeaks/_en_1.274.root")
+Det0_gam_smear->Draw("HIST")
+TFile *nareal = new TFile("resolutionDir/eveePlots/scaledSubBackrun_3.root")
+new TCanvas;
+sHist->Draw("HIST")
+.x Unfold_Example.C
+.x Unfold_Uncertainty_Example.C
+.x Unfold_Example.C
+.x Unfold_Example.C
+.x Unfold_Example.C
+.x Unfold_Example.C
+.x Unfold_Example.C
+.x Unfold_Example.C
+.x Unfold_Example.C
+.x Unfold_Example.C
+.x Unfold_Example.C
+gSystem->Load("/home/wadermane/forschoo/research/RESC_REAL/build/libDictExample.so");
+.x Unfold_Example.C
+.x Unfold_Example.C
+.x Unfold_Example.C
+.x Unfold_Example.C
+.x Unfold_Example.C
+.x _CloneHistNewBinLabels.C("resolutionDir/subBackrun_2.root","sHist","resolutionDir/eveePlots/scaledSubBackrun_2.root",-0.0111713,0.000503435)
+.x _CloneHistNewBinLabels.C("resolutionDir/subBackrun_2.root","sHist","resolutionDir/eveePlots/scaledSubBackrun_2.root",-0.0111713,0.000503435)
+.x _CloneHistNewBinLabels.C("resolutionDir/subBackrun_2.root","sHist","resolutionDir/eveePlots/scaledSubBackrun_2.root",-0.0111713,0.000503435)
+.x _CloneHistNewBinLabels.C("resolutionDir/subBackrun_2.root","sHist","resolutionDir/eveePlots/scaledSubBackrun_2.root",-0.0111713,0.000503435)
+.x _CloneHistNewBinLabels.C("resolutionDir/subBackrun_2.root","sHist","resolutionDir/eveePlots/scaledSubBackrun_2.root",-0.0111713,0.000503435)
+.x _CloneHistNewBinLabels.C("resolutionDir/subBackrun_2.root","sHist","resolutionDir/eveePlots/scaledSubBackrun_2.root",-0.0111713,0.000503435)
+.x _CloneHistNewBinLabels.C("resolutionDir/subBackrun_2.root","sHist","resolutionDir/eveePlots/scaledSubBackrun_2.root",-0.0111713,0.000503435)
+.x _CloneHistNewBinLabels.C("resolutionDir/subBackrun_2.root","sHist","resolutionDir/eveePlots/scaledSubBackrun_2.root",-0.0111713,0.000503435)
+.x _CloneHistNewBinLabels.C("resolutionDir/subBackrun_2.root","sHist","resolutionDir/eveePlots/scaledSubBackrun_2.root",-0.0111713,0.000503435)
+.x _CloneHistNewBinLabels.C("resolutionDir/subBackrun_2.root","sHist","resolutionDir/eveePlots/scaledSubBackrun_2.root",-0.0111713,0.000503435)
+.x _CloneHistNewBinLabels.C("resolutionDir/subBackrun_2.root","sHist","resolutionDir/eveePlots/scaledSubBackrun_2.root",-0.0111713,0.000503435)
+.x _CloneHistNewBinLabels.C("resolutionDir/subBackrun_2.root","sHist","resolutionDir/eveePlots/scaledSubBackrun_2.root",-0.0111713,0.000503435)
+.x _CloneHistNewBinLabels.C("resolutionDir/subBackrun_2.root","sHist","resolutionDir/eveePlots/scaledSubBackrun_2.root",-0.0111713,0.000503435)
+.x _CloneHistNewBinLabels.C("resolutionDir/subBackrun_2.root","sHist","resolutionDir/eveePlots/scaledSubBackrun_2.root",-0.0111713,0.000503435)
+TFile *nareal = new TFile("resolutionDir/monteCarloPeaks/_en_0.511.root")
+nareal->ls()
+Det0_gam_smear->Draw("HIST")
+Det0_gam_smear->GetNbinsX)(
+Det0_gam_smear->GetNbinsX()
+.x _CloneHistNewBinLabels.C("resolutionDir/subBackrun_2.root","sHist","resolutionDir/eveePlots/scaledSubBackrun_2.root",-0.0111713,0.000503435)
+.x _CloneHistNewBinLabels.C("resolutionDir/subBackrun_3.root","sHist","resolutionDir/eveePlots/scaledSubBackrun_3.root",-0.0111713,0.000503435)
+new TCanvas;
+TFile *nareal = new TFile("resolutionDir/monteCarloPeaks/_en_0.511.root")
+Det0_gam_smear->Draw("HIST")
+new TCanvas;
+.x _CloneHistNewBinLabels.C("resolutionDir/subBackrun_2.root","sHist","resolutionDir/eveePlots/scaledSubBackrun_2.root",-0.0111713,0.000503435)
+TFile *cs = new TFile("resolutionDir/monteCarloPeaks/_en_0.662.root")
+Det0_gam_smear->Draw("same")
+Det0_gam_smear->Scale(0.5)
+Det0_gam_smear->Draw("same")
+new TCanvas;
+Det0_gam_smear->Draw("HIST")
+Det0_gam_smear->GetXBins()
+Det0_gam_smear->GetNBinsX()
+Det0_gam_smear->GetNbinsX()
+Det0_gam_smear->GetLowEdge(1)
+Det0_gam_smear->GetBinLowEdge(1)
+Det0_gam_smear->GetBinLowEdge(3000)
+Det0_gam_smear->GetBinLowEdge(3001)
+TFile *cs = new TFile("resolutionDir/eveePlots/scaledSubBackrun_2.root")
+cs->GetNbinsX()
+cs->GetNBinsX()
+sHist->GetNBinsX()
+cs->ls()
+sHist->GetNbinsX()
+sHist->GetBinLowEdge(16385)
+sHist->GetBinLowEdge(16384)
+sHist->GetBinLowEdge(1)
+sHist->Rebin(198)
+sHist->Rebin(128)
+sHist->Rebin(3)
+sHist->Rebin(4)
+sHist->Draw(()
+.@
+sHist->Draw("HIST")
+TFile *cs = new TFile("resolutionDir/eveePlots/scaledSubBackrun_2.root")
+sHist->Draw("HIST")
+sHist->Rebin(4)
+sHist->Rebin(4)
+TFile *nareal = new TFile("resolutionDir/monteCarloPeaks/_en_0.511.root")
+nareal->Draw()
+new TCanvas;
+nareal->Draw()
+Det0_gam_smear->Draw()
+TFile *na = new TFile("resolutionDir/eveePlots/scaledSubBackrun_3.root")
+new TCanvas;
+sHist->Draw();
+sHist->Rebin(4)
+sHist->Rebin(4)
+TFile *na = new TFile("resolutionDir/monteCarloPeaks/_en_1.274.root")
+Det0_gam_smear->Draw()
+new TCanvas;
+sHist->Draw()
+TFile *nameas = new TFile("resolutionDir/eveePlots/scaledSubBackrun_3.root")
+sHist->Draw()
+.x _CloneHistNewBinLabels.C("resolutionDir/subBackrun_0.root","sHist","resolutionDir/eveePlots/scaledSubBackrun_0.root",-0.0111713,0.000503435)
+.x _CloneHistNewBinLabels.C("resolutionDir/subBacksubNeutrun_4.root","sHist","resolutionDir/eveePlots/subBacksubNeutrun_4.root",-0.0111713,0.000503435)
+TFile *am = new TFile("resolutionDir/eveePlots/scaledSubBackrun_0.root")
+sHist->Draw("HIST")
+TFile *amsim = new TFile("resolutionDir/monteCarloPeaks/_en_0.0596.root")
+new TCanvas;
+Det0_gam_smear->Draw()
+amsim->ls()
+Det0_gam_lo->Draw()
+TFile *am = new TFile("resolutionDir/eveePlots/scaledSubBackrun_0.root")
+Det0_gam_smear->Draw()
+sHist->Draw("HIST")
+new TCanvas;
+TFile *amsim = new TFile("resolutionDir/monteCarloPeaks/_en_0.0596.root")
+Det0_gam_smear->Draw()
+TFile *nasim511 = new TFile("resolutionDir/monteCarloPeaks/_en_0.511.root")
+new TCanvas;
+Det0_gam_smear->Draw()
+TFile *na = new TFile("resolutionDir/eveePlots/scaledSubBackrun_3.root")
+new TCanvas;
+sHist->Draw("HIST")
+TFile *cs = new TFile("resolutionDir/eveePlots/scaledSubBackrun_2.root")
+new TCanvas;
+sHist->Draw("HIST")
+TFile *cssim = new TFile("resolutionDir/monteCarloPeaks/_en_0.662.root")
+new TCanvas;
+Det0_gam_smear->Draw()
+TFile *cssim = new TFile("resolutionDir/monteCarloPeaks/_en_0.662.root")
+cssim->ls()
+Det0_gam_smear->Draw()
+Det0_gam_smear->Scale(1./Det0_gam_smear->GetMaximum());
+Det0_gam_smear->Draw()
+TFile *na = new TFile("resolutionDir/eveePlots/scaledSubBackrun_3.root")
+TFile *cs = new TFile("resolutionDir/eveePlots/scaledSubBackrun_2.root")
+cs->ls()
+sHist->GetXaxis()->SetRangeUser(.2,0.6);
+sHist->Scale(1./sHist->GetMaximum());
+sHist->SetLineColor(2);
+sHist->Draw("same")
+TFile *cssim = new TFile("resolutionDir/monteCarloPeaks/_en_0.662.root")
+Det0_gam_smear->Draw()
+cssim->ls()
+Det0_gam_lo->Draw("same")
+Det0_gam_lo->Draw()
+Det0_gam_lo->Draw("hist")
+Det0_gam_smear->SetLineColor(2);
+Det0_gam_smear->Draw("same")
+Det0_gam_smear->Draw("same")
+543*.8
+TFile *test= new TFile("resolutionDir/gaussian_plots/run_2gaussian.root")
+test->ls()

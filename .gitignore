@@ -1,0 +1,30 @@
+# ignore all files matching these patterns
+
+syntax: glob
+
+# Typical temporary or generated files
+*.o
+*.so
+*.d
+*_dict.cc
+*_dict.h
+*_dict_rdict.pcm
+*_dict.cxx
+*.rootmap
+*.swp
+*~
+*.pyc
+*.bak
+*.root
+*.wrl
+*.a
+*.png
+*.jpeg
+*.jpg
+*.pdf
+*.txt
+*.eps
+*.ods
+build/
+scripts/figures
+scripts/EJ315_Data/oldCal/

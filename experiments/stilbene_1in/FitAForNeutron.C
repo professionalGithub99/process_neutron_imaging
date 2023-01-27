@@ -1,0 +1,202 @@
+// ROOT
+#include <TROOT.h>
+#include <TFile.h>
+#include <TMath.h>
+#include <TCanvas.h>
+#include <TString.h>
+#include <TH1F.h>
+#include <TF1.h>
+// c++ 
+#include <iostream>
+#include <vector>
+// namespaces
+using namespace std;
+// vectors
+// use next two variables to calulate underlying Gaus distribution
+vector<double> s_en; // sim values of deposited energy spectrum 
+vector<double> s_y;  // sim yield values
+vector<double> ev;   // measured ev value 
+// histograms
+TH1F *hSim;
+TH1F *hSmear;
+TH1F *hExp;
+//double sFR = 0.9; // Na22  // 0.35; // Cs137
+//double eFR = 1.1; // Na22  // 0.55; // Cs137
+//double sFR = 0.1;  // Ba133  
+//double eFR = 0.25; // Ba133 
+double sFR = 4;  // Ba133  
+double eFR = 8.4; // Ba133 
+
+//TF1 *fg;
+// data structure
+typedef struct
+  {
+    Float_t l;               // Long integral
+    Float_t s;               // Short integral
+    Float_t amp;             // Amplitude
+    Float_t cfd;             // Trigger time
+    Float_t psd;             // PSD parameter s/l
+    Float_t trg;             // Detector trigger
+
+  } Detector;
+
+Detector det;
+
+// smear function: smears the deposited energy spectrum based on the mean and 
+// sigma provided and scale to equal the number of events
+// **** fit function ****
+double fcn(double par);
+
+
+// ********************
+// *** main routine ***
+// ********************
+void FitAForNeutron(TString eF = "expFile.root", 
+                    TString bF = "background.root",
+                    TString sF = "sim.root")
+{
+  // ****************
+  // *** sim file ***
+  // ****************
+  //TFile *f1 = new TFile("/home/7jn/ldropbox/G4Projects/singlePix/stilbeneResponse/neutron/_en_14.1.root");//05954.root");//Cs137_t8.root");
+  TFile *f1 = new TFile("/home/7jn/ldropbox/G4Projects/odessa_1/oneInStilResponse/neutron/_en_14.1.root"); // 
+
+  TString channel = "ptracks";
+  TTree *t;
+  f1->GetObject(channel, t);
+  double lo_p;
+  t->SetBranchAddress("lo",&lo_p);
+  
+  int nBins = 500;
+  double sR = 1;
+  double eR = 10;
+  hSim  = new TH1F("hSim","",nBins,sR,eR);
+  
+  for(int i=0; i<t->GetEntries(); i++)
+  {
+    t->GetEntry(i);
+    if(lo_p>0) 
+      hSim->Fill(lo_p);
+  }
+
+  hSmear = new TH1F("hSmear",";;",hSim->GetNbinsX(),0,hSim->GetXaxis()->GetXmax());
+
+  // exp file
+  auto f2 = new TFile( "resCalData/_ch0_DT.root", "read" );
+  channel = "T";
+  TTree *T;
+  double energy, timestamp;
+  f2->GetObject(channel, T);
+  T->SetBranchAddress("d",&det);
+  T->SetBranchAddress("E",&energy);
+  T->SetBranchAddress("timestamp",&timestamp);
+  // setup histos with the right ranges and bin numbers
+  hExp = new TH1F("hExp","",nBins,sR,eR);
+  // use ratio to line up perfectly to edge
+  T->Draw("d.l * 9.5214232e-05*1.01 >> hExp","d.psd>0.13 && d.amp<13444",""); // DT
+
+  hExp = (TH1F*)gDirectory->Get("hExp");
+  T->GetEntry(0);
+  double firstTime = timestamp;
+  T->GetEntry(T->GetEntriesFast()-1);
+  double lastTime  = timestamp;
+  double totTime = lastTime - firstTime;
+  totTime *= 1E-9; // convert to seconds
+  hExp->Scale(1./totTime);
+  
+  hSim->SetLineColor(3);
+
+  double t_res;
+  double t_chi2;
+  auto ttt = new TTree("ttt","res and chi2");
+  ttt->Branch("res",&t_res,"t_res/D");
+  ttt->Branch("chi2",&t_chi2,"t_chi2/D");
+  double res_in = .001;
+  int n_i = 1/res_in; 
+  int minPos = 0;
+  double minRes = 0.05;
+  double minVal;
+  for(int i=0; i<n_i; i++)
+  {
+    if(i%100 == 0) cout << "iteration: " << i << " complete\n";
+    t_res  = (i+1) * res_in;
+    t_chi2 = fcn(t_res);
+    if(i==0) minVal = t_chi2;
+    else if(t_chi2 < minVal)
+    {
+      minPos = i;
+      minVal = t_chi2;
+      minRes = t_res;
+    }
+    ttt->Fill();
+  }
+  
+  //gROOT->SetBatch(); // prevent actually showing the plots here
+  // must draw something first to fill data structures
+  cout << "pos: " << minPos << " val check: " << minVal << endl; 
+  cout << "min chi2: " << ttt->GetMinimum("t_chi2") << std::endl;
+  cout << "min res: " << minRes << endl;
+  fcn(minRes); 
+  // *** Draw some stuff ***
+  // scale for viewing
+  hSim->GetXaxis()->SetRangeUser(sFR,eFR);
+  hExp->GetXaxis()->SetRangeUser(sFR,eFR);
+  hSmear->GetXaxis()->SetRangeUser(sFR,eFR);
+
+  //hExp->Scale(hSmear->Integral()/hExp->Integral());
+  //hSmear->Scale(1/hSmear->GetMaximum());
+  //hExp->Scale(1/hExp->GetMaximum());
+
+  //hSim->Draw("hist");
+  hSmear->SetLineColor(2);
+  hExp->Draw("hist");
+  //new TCanvas;
+  hSmear->Draw("same hist");
+}  
+
+double fcn(double par)
+{
+  hSmear->Reset();
+  double lightSmear;
+  double depositedEnergy;
+  double resolution;
+  resolution = par;
+
+  TRandom1 rand; // 1D random number
+  for( Int_t i=1; i<=hSmear->GetNbinsX(); i++ )
+  {
+		for( Int_t j=0; j<hSim->GetBinContent(i); j++ )
+    {
+      depositedEnergy = hSim->GetXaxis()->GetBinCenter(i);
+
+      // smear the light output
+      //resolution = res;//.13;
+
+      lightSmear = rand.Gaus(depositedEnergy, resolution * depositedEnergy / 2.35);
+
+      while (lightSmear<=-0)
+      {
+        lightSmear = rand.Gaus(depositedEnergy, resolution * depositedEnergy / 2.35);
+      }
+			hSmear->Fill(lightSmear);//.35 for 15.1 MeV*/
+		}
+  }
+  //hSim->GetXaxis()->SetRangeUser(sR,eR);
+  hExp->GetXaxis()->SetRangeUser(sFR,eFR);
+  hSmear->GetXaxis()->SetRangeUser(sFR,eFR);
+
+  hSmear->Scale(hExp->Integral() / hSmear->Integral());
+
+  // calc Chi2
+  int i_s = hExp->FindBin(sFR);
+  int i_e = hExp->FindBin(eFR);
+  double chi2 = 0;
+  for( Int_t i=i_s; i<i_e; i++ )
+  {
+    auto oVal = hSmear->GetBinContent(i);
+    auto eVal = hExp->GetBinContent(i);
+    if(eVal > 0 && oVal > 0) chi2 += ( (oVal-eVal)*(oVal-eVal) ) / TMath::Sqrt(eVal); 
+  }
+  //cout << chi2 << " : " << resolution << endl;
+  return chi2;
+}
